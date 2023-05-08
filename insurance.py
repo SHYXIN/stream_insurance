@@ -11,6 +11,7 @@ if nav == "简介":
     st.text(" ")
     st.text(" ")
     st.image('health_insurance.jpeg', width=600)
+ 
 
 df.replace({'sex': {'male': 0, 'female': 1}}, inplace=True)
 
@@ -27,7 +28,7 @@ rfr = RandomForestRegressor()
 rfr.fit(x, y)
 
 if nav == "预测保险费":
-    st.title("输入特征")
+    st.title("输入信息")
 
     age = st.number_input("年龄: ", step=1, min_value=0)
 
